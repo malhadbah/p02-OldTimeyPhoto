@@ -31,9 +31,15 @@ for(int y=0; y< bmp.size(); y++)
        }
    }
 
-   //Put the changed image back into matrix, update the bitmap and save it
-   image.fromPixelMatrix(bmp);
-   image.save("OldTimeyPicture.bmp");
+//Put the changed image back into matrix, update the bitmap and save it
+image.fromPixelMatrix(bmp);
+image.save("OldTimeyPicture.bmp");
+ 
+
+//verify that the file opened was a valid image
+
+bool validBmp = image.isImage();
+if( validBmp == false)
 
    return 0;
    }
